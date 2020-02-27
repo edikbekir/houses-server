@@ -6,7 +6,7 @@ const proxy = require('http-proxy-middleware');
 const app = express();
 var cors = require('cors');
 
-var whitelist = ['https://glacial-shore-23815.herokuapp.com', 'http://localhost:3000', 'http://localhost:3001']
+var whitelist = ['http://localhost:3000', 'http://localhost:3001']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

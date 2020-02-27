@@ -19,6 +19,7 @@ const transporter = nodemailer.createTransport({
 const send = ( data ) => {
   const mailOptions = {
     to: data.email,
+    from: `Steingot <${process.env.SENDER_GMAIL_EMAIL}>`,
     subject: `Отчет о плитке`,
     text: `
       Общая площадь: ${data.area} м2 \n
