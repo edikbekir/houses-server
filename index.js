@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('*', (req, res) => {
-  res.send('Server is working. Please post at "/contact" to submit a message.')
+  res.send('Server is working. Please post at "/api/contact" to submit a message.')
 })
 
 app.post('/api/contact', (req, res) => {
